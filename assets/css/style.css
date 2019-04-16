@@ -1,0 +1,26 @@
+
+.gameBanner{
+    background-image: url(../images/horror-icon-banner.png);
+    height: 250px;
+    width: 100%;
+}
+.gameTitle{
+    padding-top: 30px;
+    color: white;
+    font-family: 'Audiowide', cursive;
+    font-size: 72px;
+    font-weight: bold;
+    text-align: center;
+}
+body{
+    background-color: black;
+}
+h2,
+h4{
+    color: white;
+    font-family:  'Audiowide', cursive;
+}
+.correctAnswer{
+    text-align: center;
+    padding: 20px;
+}
