@@ -28,19 +28,22 @@ var horrorIcons = [
 // Randomly selects string from var horrorIcons //
 
 var icon = horrorIcons[Math.floor(Math.random() * horrorIcons.length)];
-console.log(icon)
-
+var rightLetter = [];
+var wrongLetter = [];
 var underscore = [];
 
-// Creates underscores based on length of word //
+console.log(icon)
 
+// Creates underscores based on length of word //
+//OFFICE HOURS: WHY DOES THIS WORK? Arrow Function...//
 var makeUnderscore = () => {
     for(var i=0; i<icon.length; i++) {
-        underscore.push("_");
+        underscore.push(" _ ");
     }return underscore;
 }
 
 console.log(makeUnderscore());
+
 
 // Record keys user presses //
 
@@ -49,10 +52,21 @@ document.onkeyup = function() {
     toLowerCase();
 
     console.log(userGuess)
-}
 
-// Determines if userGuess is found in word //
+// Determines if userGuess is found in word, pushes to rightLetter or wrongLetter array //    
 
-// If found in word, push to right array //
+    if(icon.indexOf(userGuess) > -1) {
+        rightLetter.push(userGuess);
+        underscore[icon.indexOf(userGuess)] = userGuess;
+        console.log("In word")
+    }else{
+        wrongLetter.push(userGuess);
+        console.log("Not in word")
+    }
 
-// if not found in word, push to wrong array //
+    
+
+};
+
+// Tells the user how many guesses they have left out of 9 //
+// OFFICE HOURS: WHERE SHOULD THIS GO? BELOW document.onkeyup, OR DOWN HERE? //
