@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-    <script src="../word-guess-game/assets/javascript/game.js"></script>
     <title>Horror Icons Hangman</title>
 </head>
 
@@ -18,6 +17,9 @@
 </header>
 
 <body>
+    
+    <embed loop="true" src="https://www.youtube.com/watch?v=pNkQMtZAMAw" hidden="true" type="video/quicktime"></embed>
+
     <div class="container">
         <div class="col-md-12">
             <h2 class="correctAnswer">Placeholder</h2>
@@ -27,17 +29,30 @@
                 <img src="http://placehold.it/300" alt="">
             </div>
             <div class="col-md-6 gameplayDiv">
-                <h4>Press any key to start!</h4>
-                <br>
-                <h4>Wins:</h4>
-                <br>
-                <h4></h4>
-                <br>
-                <h4>Number of Guesses Remaining:</h4>
-                <br>
-                <h4>Letters Already Guessed:</h4>
+                <div class="instructions">
+                    <h4>Press any key to start!</h4>
+                </div>
+                        <br>
+                <div>    
+                    <h4 class="wins">Wins:</h4>
+                </div>
+                        <br>
+                <div>
+                    <h4 class="underscore">_ _ _ _</h4>
+                </div>
+                        <br>
+                <div>
+                    <h4 class="remGuesses">Number of Guesses Remaining:</h4>
+                </div>
+                        <br>
+                <div>
+                    <h4 class="alreadyGuessed">Letters Already Guessed:</h4>
+                </div>
             </div>
         </div>
     </div>
 </body>
+
+<script src="../word-guess-game/assets/javascript/game.js"></script>
+
 </html>

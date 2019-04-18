@@ -4,9 +4,17 @@
     height: 250px;
     width: 100%;
 }
+h1{
+        color: black;
+        -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+
+}
 .gameTitle{
     padding-top: 30px;
     color: white;
+    
     font-family: 'Audiowide', cursive;
     font-size: 72px;
     font-weight: bold;
