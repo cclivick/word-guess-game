@@ -28,7 +28,13 @@ h4{
     color: white;
     font-family:  'Audiowide', cursive;
 }
-.correctAnswer{
+#correctAnswer{
     text-align: center;
     padding: 20px;
+}
+#guessed,
+#remainingGuesses,
+#underscore{
+    font-size: 36px;
+    color: rgb(250, 91, 91);
 }

@@ -18,15 +18,13 @@
 
 <body>
     
-    <embed loop="true" src="https://www.youtube.com/watch?v=pNkQMtZAMAw" hidden="true" type="video/quicktime"></embed>
-
     <div class="container">
         <div class="col-md-12">
-            <h2 class="correctAnswer">Placeholder</h2>
+            <h2 id="correctAnswer">???????</h2>
         </div>
         <div class="row">
             <div class="col-md-6 correctAnswerPic">
-                <img src="http://placehold.it/300" alt="">
+                <img id="prevAnswerPic">
             </div>
             <div class="col-md-6 gameplayDiv">
                 <div class="instructions">
@@ -34,11 +32,11 @@
                 </div>
                         <br>
                 <div>    
-                    <h4 class="wins">Wins:</h4>
+                    <h4 id="wins">Wins:</h4>
                 </div>
                         <br>
                 <div>
-                    <h4 class="underscore">_ _ _ _</h4>
+                    <h4 id="underscore"></h4>
                 </div>
                         <br>
                 <div>
@@ -48,6 +46,7 @@
                         <br>
                 <div>
                     <h4>Letters Already Guessed:</h4>
+                    <h4 id="guessed"></h4>
                 </div>
             </div>
         </div>
