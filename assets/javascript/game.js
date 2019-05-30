@@ -2,32 +2,34 @@
 // Creates an array of possible words for hangman game //
 
 var horrorIcons = [
-    "jason",
-    "freddy",
-    "pennywise",
-    "leatherface",
-    "chucky",
-    "jaws",
-    "elvira",
-    "michaelmyers",
-    "pinhead",
-    "normanbates",
-    "candyman",
-    "hannibal",
-    "jigsaw",
-    "ghostface",
-    "dracula",
-    "thething",
-    "alien",
-    "predator",
-    "tallman",
-    "poltergeist"
+    {name: "jason", image: "assets/images/jason.jpg"},
+    {name: "freddy", image: "assets/images/freddy-krueger.jpg"},
+    {name: "pennywise", image: "assets/images/pennywise.jpg"},
+    {name: "leatherface", image: "assets/images/leatherface.jpg"},
+    {name: "chucky", image: "assets/images/chucky.Jpg"},
+    {name: "jaws", image: "assets/images/jaws.jpg"},
+    {name: "elvira", image: "assets/images/elvira.jpg"},
+    {name: "michaelmyers", image: "assets/images/mikemyers.jpg"},
+    {name: "pinhead", image: "assets/images/pinhead.jpg"},
+    {name: "normanbates", image: "assets/images/psycho.jpg"},
+    {name: "candyman", image: "assets/images/candyman.jpg"},
+    {name: "hannibal", image: "assets/images/hannibal.jpg"},
+    {name: "jigsaw", image: "assets/images/jigsaw.jpg"},
+    {name: "ghostface", image: "assets/images/scream.jpg"},
+    {name: "dracula", image: "assets/images/dracula.jpg"},
+    {name: "thething", image: "assets/images/thing.jpg"},
+    {name: "alien", image: "assets/images/alien.jpg"},
+    {name: "predator", image: "assets/images/predator.jpg"},
+    {name: "tallman", image: "assets/images/tallman.jpg"},
+    {name: "poltergeist", image: "assets/images/poltergeist.jpg"}
 ]
 
 
 // Randomly selects string from var horrorIcons //
 
 var icon = horrorIcons[Math.floor(Math.random() * horrorIcons.length)];
+var iconName = icon.name;
+var iconPic = icon.image;
 var rightLetter = [];
 var wrongLetter = [];
 var underscore = [];
@@ -35,19 +37,18 @@ var remainingGuesses = 12;
 var numWins = 0;
 var previousAnswer = [];
 
-/* PERSON GRADING THIS: If else statement not working here. Picture of Freddy shows up automatically and does not change based on previousAnswer array */
+console.log(iconName)
 
-if(previousAnswer === "f", "r", "e", "d", "d", "y") {
-    document.getElementById("prevAnswerPic").src = "assets/images/freddy-krueger.jpg"
-}else if(previousAnswer === "j", "a", "s", "o", "n") {
-    document.getElementById("prevAnswerPic").src = "assets/images/jason.jpg"
+//Give user a picture as a hint
+function picHint() {
+    document.getElementById("prevAnswerPic").src = iconPic;  
 }
 
-console.log(icon)
+picHint();
 
 // Creates underscores based on length of word //
 var makeUnderscore = () => {
-    for(var i=0; i<icon.length; i++) {
+    for(var i=0; i<iconName.length; i++) {
         underscore.push(" _ ");
         document.getElementById("underscore").innerHTML = underscore
     }return underscore;
@@ -72,20 +73,18 @@ document.onkeyup = function() {
     }
 // Determines if userGuess is found in word, pushes to rightLetter or wrongLetter array //   
 
-    if(icon.indexOf(userGuess) != -1) {
-        for(var w = 0; w < icon.length; w++) {
-            if(icon[w] === userGuess) {
+    if(iconName.indexOf(userGuess) != -1) {
+        for(var w = 0; w < iconName.length; w++) {
+            if(iconName[w] === userGuess) {
 // Replaces underscores with correct user guesses //
                 underscore[w] = userGuess;
                 rightLetter.push(userGuess);
-                console.log("rightLetter: " + rightLetter)
                 console.log("underscore: " + underscore)
             }}
                 document.getElementById("underscore").innerHTML = underscore
             }else{
                 wrongLetter.push(userGuess);
                 document.getElementById("guessed").innerHTML = wrongLetter
-                console.log("wrongLetter: " + wrongLetter)
     }
     if(underscore.indexOf(" _ ") === -1) {
         numWins++;
@@ -94,15 +93,18 @@ document.onkeyup = function() {
     //Push underscore array into previousAnswer array
         previousAnswer.push(underscore);
     //Change html to display previousAnswer in "correctAnswer" element
-        document.getElementById("correctAnswer").innerHTML = previousAnswer;
+        document.getElementById("correctAnswer").innerHTML = underscore.join("");
 
-        console.log(previousAnswer);
     //Remove old word
         underscore = [];
         console.log(underscore)
     //Choose new word
         icon = horrorIcons[Math.floor(Math.random() * horrorIcons.length)];
-         for(var j = 0; j<icon.length; j++){
+        iconName = icon.name;
+        iconPic = icon.image;
+        picHint();
+        console.log(iconName)
+         for(var j = 0; j<iconName.length; j++){
              underscore.push(" _ ");
              document.getElementById("underscore").innerHTML = underscore;
     //Reset previousAnswer and Change to new previousAnswer
