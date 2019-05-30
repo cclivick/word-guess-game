@@ -50,7 +50,7 @@ picHint();
 var makeUnderscore = () => {
     for(var i=0; i<iconName.length; i++) {
         underscore.push(" _ ");
-        document.getElementById("underscore").innerHTML = underscore
+        document.getElementById("underscore").innerHTML = underscore.join(" ")
     }return underscore;
 }
 
@@ -81,7 +81,7 @@ document.onkeyup = function() {
                 rightLetter.push(userGuess);
                 console.log("underscore: " + underscore)
             }}
-                document.getElementById("underscore").innerHTML = underscore
+                document.getElementById("underscore").innerHTML = underscore.join(" ")
             }else{
                 wrongLetter.push(userGuess);
                 document.getElementById("guessed").innerHTML = wrongLetter
@@ -106,7 +106,7 @@ document.onkeyup = function() {
         console.log(iconName)
          for(var j = 0; j<iconName.length; j++){
              underscore.push(" _ ");
-             document.getElementById("underscore").innerHTML = underscore;
+             document.getElementById("underscore").innerHTML = underscore.join(" ");
     //Reset previousAnswer and Change to new previousAnswer
              previousAnswer = [];
          }
@@ -115,7 +115,7 @@ document.onkeyup = function() {
         document.getElementById("remainingGuesses").innerHTML = remainingGuesses;
     //Reset wrongLetter var
          wrongLetter = [];
-         document.getElementById("guessed").innerHTML = wrongLetter;
+         document.getElementById("guessed").innerHTML = wrongLetter.join(" ");
     }
 
 
