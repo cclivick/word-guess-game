@@ -93,7 +93,7 @@ document.onkeyup = function() {
     //Push underscore array into previousAnswer array
         previousAnswer.push(underscore);
     //Change html to display previousAnswer in "correctAnswer" element
-        document.getElementById("correctAnswer").innerHTML = underscore.join("");
+        document.getElementById("correctAnswer").innerHTML = "Previous Answer: " + underscore.join("");
 
     //Remove old word
         underscore = [];
