@@ -11,4 +11,4 @@ This is a relatively simple "hangman"-style word guess game that does several th
 
 ## Technologies Used
 
-For this game, I used HTML, CSS, and vanilla JavaScript. The reason for making this game was to help me learn the basics of vanilla JavaScript and further my understanding of JS logic, variables, and functions.
+For this game I used HTML and Bootstrap for formatting, CSS for styling, and vanilla JavaScript for the gameplay. The reason for making this game was to help me learn the basics of vanilla JavaScript and further my understanding of JS logic, variables, and functions.
