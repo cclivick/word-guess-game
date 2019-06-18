@@ -1,6 +1,6 @@
 # Horror Icons Word Guess Game
 
-![wordguess1](https://user-images.githubusercontent.com/46388110/59705131-60313a80-91c3-11e9-8383-b6797abdd2d9.png)
+![wordguess1](https://user-images.githubusercontent.com/46388110/59706121-67f1de80-91c5-11e9-9c28-5f10136b8771.png)
 
 ## Main Concept
 
