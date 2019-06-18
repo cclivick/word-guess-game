@@ -1,5 +1,7 @@
 # Horror Icons Word Guess Game
 
+![wordguess1](https://user-images.githubusercontent.com/46388110/59705131-60313a80-91c3-11e9-8383-b6797abdd2d9.png)
+
 This is a relatively simple "hangman"-style word guess game that does several things:
 
 1. Provides users with a hint of the word they are guessing in the form of a picture.
